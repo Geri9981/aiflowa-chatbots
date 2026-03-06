@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "app.mindspaceai",
+    "slug": "mindspace-ai",
+    "version": "1.3.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo.png",
+    "scheme": "app.mindspaceai",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.aiflowa.mindspaceai", 
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/logo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a65d7f78-c2a1-4a23-9f31-729c770d0ce2"
+      }
+    }
+  }
+}
