@@ -48,6 +48,12 @@ subprojects {
         details.useVersion "21.12.0"
       }
 
+      // FIX WebRTC dependency
+      if (details.requested.group == "org.jitsi" &&
+          details.requested.name == "webrtc") {
+        details.useVersion "124.0.0"
+      }
+
     }
   }
 }
