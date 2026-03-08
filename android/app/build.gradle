@@ -153,6 +153,7 @@ dependencies {
 
     // FIX Stripe timeout on EAS build
     implementation("com.stripe:stripe-android:21.12.0")
+    implementation("com.stripe:financial-connections:21.12.0")
 
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";

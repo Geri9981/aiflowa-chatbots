@@ -23,13 +23,11 @@ def reactNativeAndroidDir = new File(
 allprojects {
   repositories {
     maven {
-      // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
       url(reactNativeAndroidDir)
     }
 
     google()
     mavenCentral()
-    maven { url 'https://www.jitpack.io' }
   }
 }
 
@@ -39,10 +37,17 @@ apply plugin: "com.facebook.react.rootproject"
 subprojects {
   configurations.all {
     resolutionStrategy.eachDependency { details ->
+
       if (details.requested.group == "com.stripe" &&
           details.requested.name == "stripe-android") {
         details.useVersion "21.12.0"
       }
+
+      if (details.requested.group == "com.stripe" &&
+          details.requested.name == "financial-connections") {
+        details.useVersion "21.12.0"
+      }
+
     }
   }
 }
